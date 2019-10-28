@@ -1,0 +1,4 @@
+{
+  "fizz_buzz/test_fizz_buzz.py::test_fizzbuzz": true,
+  "test_string_calculator.py::test_pass_in_delimeter": true
+}

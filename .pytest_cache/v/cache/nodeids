@@ -1,0 +1,7 @@
+[
+  "test_anagrams.py::test_make_anagrams[words0-expected0]",
+  "test_anagrams.py::test_make_anagrams[words1-expected1]",
+  "test_anagrams.py::test_make_anagrams[words2-expected2]",
+  "test_anagrams.py::test_is_anagram[kinship-pinkish-True]",
+  "test_anagrams.py::test_is_anagram[asdf-hhhh-False]"
+]
