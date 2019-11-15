@@ -24,5 +24,6 @@ def hamming_generator():
             k += 1
             next_multiple_of_5 = _h[k] * 5
 
+
 def hamming(n):
     return list(itertools.islice(hamming_generator(), n))[-1]
