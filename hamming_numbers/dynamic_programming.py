@@ -6,23 +6,24 @@ def hamming_generator():
     h = 1
     yield h
     _h = [h]  # Memoize the sequence hamming numbers
-    i = j = k = 0
-    next_multiple_of_2 = _h[i] * 2
-    next_multiple_of_3 = _h[j] * 3
-    next_multiple_of_5 = _h[k] * 5
+    bases = [2,3,5]
+    expos = [0,0,0]
+    next_multiple_of_2 = _h[expos[0]] * bases[0]
+    next_multiple_of_3 = _h[expos[1]] * bases[1]
+    next_multiple_of_5 = _h[expos[2]] * bases[2]
     while True:
         h = min(next_multiple_of_2, next_multiple_of_3, next_multiple_of_5)
         yield h
         _h.append(h)
         if h == next_multiple_of_2:
-            i += 1
-            next_multiple_of_2 = _h[i] * 2
+            expos[0] += 1
+            next_multiple_of_2 = _h[expos[0]] * bases[0]
         if h == next_multiple_of_3:
-            j += 1
-            next_multiple_of_3 = _h[j] * 3
+            expos[1] += 1
+            next_multiple_of_3 = _h[expos[1]] * bases[1]
         if h == next_multiple_of_5:
-            k += 1
-            next_multiple_of_5 = _h[k] * 5
+            expos[2] += 1
+            next_multiple_of_5 = _h[expos[2]] * bases[2]
 
 
 def hamming(n):
