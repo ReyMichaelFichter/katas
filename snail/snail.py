@@ -15,20 +15,8 @@
 
 
 def snail(matrix):
-    if not matrix[0]:
-        return []
     out = []
-    start = 0
-    end = len(matrix) - 1
-    while end - start > 0:
-        out.extend([x for x in matrix[start][start:end]])
-        out.extend([x for x in list(zip(*matrix))[end][start:end]])
-        out.extend([x for x in list(reversed(matrix[end]))[start:end]])
-        out.extend(
-            [x for x in list(reversed(list(zip(*matrix))[start]))[start:end]]
-        )
-        start += 1
-        end -= 1
-    if start == end:
-        out.append(matrix[start][end])
+    while matrix:
+        out.extend(matrix.pop(0))
+        matrix = list(reversed(list(zip(*matrix))))
     return out
