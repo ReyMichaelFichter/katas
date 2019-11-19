@@ -1,6 +1,6 @@
 import pytest
 
-from string_calculator import StringCalculator
+from python.string_calculator import StringCalculator
 
 
 def test_string_calculator():

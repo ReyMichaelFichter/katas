@@ -1,6 +1,6 @@
 import pytest
 
-from snail.snail import snail
+from python.snail.snail import snail
 
 
 @pytest.mark.parametrize(

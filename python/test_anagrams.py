@@ -1,6 +1,6 @@
 import pytest
 
-from anagrams import make_anagrams, is_anagram
+from python.anagrams import make_anagrams, is_anagram
 
 
 @pytest.mark.parametrize(

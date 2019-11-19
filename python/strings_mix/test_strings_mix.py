@@ -1,6 +1,6 @@
 import pytest
 
-from strings_mix.strings_mix import mix, count_letters, assemble_str
+from python.strings_mix.strings_mix import mix, count_letters, assemble_str
 
 
 @pytest.mark.parametrize(
